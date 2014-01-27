@@ -1,10 +1,8 @@
 A great filter recently [made its way into](https://github.com/Shopify/liquid/pull/267) the Liquid templating system that makes it easy to output a default value if the variable you pass it turns out to be empty. Take this example of a metatag where I want to output the page title if it's populated, otherwise I want to output some default value instead:
 
-{% highlight html %}
-{% raw %}
+```html
 <meta property="og:title" content="{{ page.title | default: 'Paul Herron, Web Developer' }}" >
-{% endraw %}
-{% endhighlight %}
+```
 
 It's a lot more elegant than putting that same logic inside if/else blocks within your view.
 
